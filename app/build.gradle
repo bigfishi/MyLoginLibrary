@@ -6,6 +6,7 @@ import org.gradle.internal.os.OperatingSystem
 //    id 'maven'
 //}
 apply plugin: 'com.android.library'
+//apply plugin: 'java-library'
 //apply plugin: 'maven-publish'
 
 
@@ -137,6 +138,7 @@ publishing {
             artifactId = ARTIFACTID
             version = LIBRARY_VERSION
 //            artifact = bundleReleaseAar
+//            from components.java
         }
     }
 }
