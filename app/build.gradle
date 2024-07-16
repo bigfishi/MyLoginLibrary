@@ -1,7 +1,13 @@
-plugins {
-//    id 'com.android.application'
-    id 'com.android.library'
-}
+import org.gradle.internal.os.OperatingSystem
+
+//plugins {
+////    id 'com.android.application'
+//    id 'com.android.library'
+//    id 'maven'
+//}
+apply plugin: 'com.android.library'
+//apply plugin: 'maven-publish'
+
 
 android {
     compileSdk 34
@@ -32,7 +38,23 @@ android {
     }
 }
 
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+
+    // TradPlus
+    mavenCentral()
+    // Pangle
+    maven {
+        url 'https://artifact.bytedance.com/repository/pangle'
+    }
+}
+
 dependencies {
+//    compile fileTree(dir: 'libs', include: ['*.jar'])
+
     implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '3.12.12'
     implementation group: 'com.google.code.gson', name: 'gson', version: '2.11.0'
     implementation group: 'com.apifan.common', name: 'common-random', version: '1.0.21'
@@ -71,4 +93,50 @@ dependencies {
     implementation"com.google.android.libraries.identity.googleid:googleid:1.1.0"
     //Thinking
     //implementation 'cn.thinkingdata.android:ThinkingAnalyticsSDK:2.8.1'
+}
+
+apply plugin: 'maven-publish'
+
+//uploadArchives{
+//    repositories.mavenDeployer{
+//        repository(url:LOCAL_REPO_URL)
+//        pom.groupId = GROUP_ID
+//        pom.artifactId = ARTIFACTID
+//        pom.version = LIBRARY_VERSION
+//    }
+//}
+
+//publishing {
+//    repositories {
+//        maven {
+//            repository(url:LOCAL_REPO_URL)
+//            pom.groupId = GROUP_ID
+//            pom.artifactId = ARTIFACTID
+//            pom.version = LIBRARY_VERSION
+//        }
+//    }
+//}
+
+//publishing {
+//    publications {
+//        maven(MavenPublication) {
+//            repository(url:LOCAL_REPO_URL)
+//            groupId = GROUP_ID
+//            artifactId = ARTIFACTID
+//            version = LIBRARY_VERSION
+//
+//            from components.java
+//        }
+//    }
+//}
+
+publishing {
+    publications {
+        libraryProject(MavenPublication) {
+            groupId = GROUP_ID
+            artifactId = ARTIFACTID
+            version = LIBRARY_VERSION
+//            artifact = bundleReleaseAar
+        }
+    }
 }

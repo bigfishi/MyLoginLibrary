@@ -1,4 +1,4 @@
-package com.fisher.myloginlibrary.arrbuild1.BaseSdk;
+package com.fisher.multisdk.BaseSdk;
 
 import android.app.Activity;
 import android.opengl.GLSurfaceView;

@@ -1,4 +1,4 @@
-package com.fisher.myloginlibrary.arrbuild1.login;
+package com.fisher.multisdk;
 
 import android.content.Intent;
 import android.util.Log;
@@ -54,7 +54,7 @@ import com.facebook.GraphResponse;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.LoginBehavior;
-import com.fisher.myloginlibrary.arrbuild1.BaseSdk.BaseSdk;
+import com.fisher.multisdk.BaseSdk.BaseSdk;
 
 import org.json.JSONException;
 import org.json.JSONObject;

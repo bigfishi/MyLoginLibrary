@@ -1,4 +1,4 @@
-package com.fisher.myloginlibrary.arrbuild1.login;
+package com.fisher.multisdk;
 
 
 import android.content.Intent;

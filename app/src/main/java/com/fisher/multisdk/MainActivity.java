@@ -1,4 +1,4 @@
-package com.fisher.myloginlibrary.arrbuild1;
+package com.fisher.multisdk;
 
 import android.os.Bundle;
 
@@ -13,7 +13,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.fisher.mypermision.arrbuild1.databinding.ActivityMainBinding;
+import com.fisher.multisdk.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;

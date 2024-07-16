@@ -1,4 +1,4 @@
-package com.fisher.myloginlibrary.arrbuild1.login;
+package com.fisher.multisdk;
 
 //import android.app.Activity;
 import android.content.Context;
@@ -17,7 +17,7 @@ import android.content.Context;
 import android.util.Log;
 
 
-import com.fisher.myloginlibrary.arrbuild1.BaseSdk.BaseSdk;
+import com.fisher.multisdk.BaseSdk.BaseSdk;
 import com.google.android.libraries.identity.googleid.GetGoogleIdOption;
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential;
 
